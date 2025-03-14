@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bill.css">
+</head>
+ <script>
+    function printresult(){
+    n1=document.getElementById("p").value;
+    n2=document.getElementById("q").value;
+    opp=document.getElementById("opp").value;
+    dis=document.getElementById("dis").value;
+    print=document.getElementById("gst").innerHTML=n1*opp/100*n2;
+    print=document.getElementById("to").innerHTML=n1*n2;
+    print=document.getElementById("pr").innerHTML=n1;
+    print=document.getElementById("qu").innerHTML=n2;
+    print=document.getElementById("per").innerHTML=opp+"%";
+    sum=+n1*opp/100*n2+ +n1*n2;
+    print=document.getElementById("sm").innerHTML=sum;
+    print=document.getElementById("dis1").innerHTML=dis+"%";
+    disc=(sum*2)/100;
+    document.getElementById("save").innerHTML=disc;
+    document.getElementById("max").innerHTML=sum-disc;
+    }
+ </script>
+
+<body>
+    
+    <label>Enter price </label>
+    <input type="text" id="p">
+
+    <select id="opp">
+        <option>Selet Gst</option>
+        <option value="18">18%</option>
+        <option value="9">9%</option>
+        <option value="20">20%</option>
+    </select>
+    <label>Enter Quentity</label>
+    <input type="text" id="q">
+    
+    <select id="dis">
+        <option>Save</option>
+        <option value="20">20%</option>
+        <option value="16">16%</option>
+        <option value="32">32%</option>
+
+    </select>
+    <button class="btn" onclick="printresult()">Get bill</button>
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col mt-5 mb-5">
+            
+                <div class="bill">
+                    <h2>GST BILL</h2>
+                    <table>
+                        <tr>
+                            <td>Price :</td>
+                            <td id="pr"></td>
+                        </tr>
+                        <tr>
+                            <td>Quentity :</td>
+                            <td id="qu"></td>
+                        </tr>
+                        <tr>
+                            <td>GST :</td>
+                            <td id="gst"></td>
+                        </tr>
+                        <tr>
+                            <td>Total :</td>
+                            <td id="to"></td>
+                        </tr>
+                        <tr>
+                            <td>MRP :</td>
+                            <td id="sm"></td>
+                        </tr>
+                        <tr>
+                            <td>GSTP :</td>
+                            <td id="per"></td>
+                        </tr>
+                        <tr>
+                            <td>Discount :</td>
+                            <td id="dis1"></td>
+                        </tr>
+                        <tr>
+                            <td>SAVE :</td>
+                            <td id="save"></td>
+                        </tr>
+                        <tr>
+                            <td>price :</td>
+                            <td id="max"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+         </div>
+      </div>
+</body>
+</html>
